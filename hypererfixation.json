@@ -1,0 +1,9 @@
+{
+    "id": "HyperfixationPOA",
+    "name": "Hyperfixation: P.O.A",
+    "author": ["tomatose","IncognitoN71"],
+    "description": "Ready for Round 2?",
+    "prefix": "hpfxp",
+    "main_file": "Hypererfixation.lua",
+    "version": "0.0.1"
+}
