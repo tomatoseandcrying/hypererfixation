@@ -42,6 +42,19 @@ return {
                         '{C:inactive}(Rounded up){}'
                     }
                 }
+            },
+            j_hpfxp_judas = {
+                name = "Judas",
+                text = {
+                    {
+                        '{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult'
+                    },
+                    {
+                        'This Joker gains {C:mult}+#3#{} Mult for',
+                        'every {C:money}$#4#{} you spend, resets',
+                        'when {C:attention}Boss Blind{} is defeated'
+                    }
+                }
             }
         }
     }
