@@ -37,9 +37,9 @@ return {
                         '{C:chips}+#1#{} Chips'
                     },
                     {
-                        'Ranks of played cards',
-                        'with {C:hearts}#2#{} suit are',
-                        'increased by {C:attention}#3#{}'
+                        'Increases all {C:attention}listed{}',
+                        '{C:green}probabilities{} by {C:green}#2#%{}',
+                        '{C:inactive}(Rounded up){}'
                     }
                 }
             }
