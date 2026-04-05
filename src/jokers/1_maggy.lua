@@ -7,7 +7,7 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            chips = 30,
+            chips = 35,
             rank_up = 1,
             suit = 'Hearts',
         }

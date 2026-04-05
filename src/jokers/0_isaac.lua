@@ -7,7 +7,7 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            chips = 30,
+            chips = 35,
             rerolls = 1,
             rerollFund = 6,
             carryover = 0,
@@ -44,6 +44,9 @@ SMODS.Joker {
                 moneySpentTemp = moneySpentTemp + rerollFundTemp
             end
             card.ability.extra.carryover = moneySpentTemp
+            return {
+                message = localize('k_upgrade_ex')
+            }
         end
         if context.reroll_shop and not context.blueprint then --reroll counter visual decrease
             card.ability.extra.rerolls = card.ability.extra.rerolls - card.ability.extra.freeRerollMod

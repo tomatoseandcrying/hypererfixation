@@ -2,7 +2,7 @@ SMODS.Joker {
     key = 'cain',
     atlas = 'placeholders',
     pos = {
-        x = 0,
+        x = 1,
         y = 0
     },
     config = {
