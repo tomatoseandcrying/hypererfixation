@@ -35,7 +35,7 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-        if context.money_altered and context.amount < 0 then --reroll stacking
+        if context.money_altered and context.amount < 0 and not context.blueprint then --reroll stacking
             local rerollFundTemp = card.ability.extra.rerollFund + card.ability.extra.carryover
             local moneySpentTemp = context.amount
             while (moneySpentTemp * -1) > rerollFundTemp do
@@ -45,7 +45,7 @@ SMODS.Joker {
             end
             card.ability.extra.carryover = moneySpentTemp
         end
-        if context.reroll_shop then --reroll counter visual decrease
+        if context.reroll_shop and not context.blueprint then --reroll counter visual decrease
             card.ability.extra.rerolls = card.ability.extra.rerolls - card.ability.extra.freeRerollMod
         end
     end
