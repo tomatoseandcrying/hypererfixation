@@ -40,3 +40,4 @@ luac.out
 *.hex
 
 .luarc.json
+assets/assets_scaler_mk2.py

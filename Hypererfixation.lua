@@ -1,3 +1,15 @@
+--#region Atlases? Atli?? lmao
+
+SMODS.Atlas {
+    key = 'placeholders',
+    path = 'placeholders.png',
+    px = 71,
+    py = 95
+}
+
+--#endregion
+
+--#region File Loading
 mod_path = "" .. SMODS.current_mod.path
 ---Loads all files in a folder (Will likely load unordered.)
 ---@param folder string The filepath to the folder you want to load. (ex: "Ijiraq/Exceptions")
@@ -35,3 +47,7 @@ function HPFX_load_folder(folder, opts)
         end
     end
 end
+
+HPFX_load_folder("src/jokers")
+
+--#endregion
