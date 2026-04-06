@@ -7,7 +7,7 @@ return {
                     {
                         '{C:chips}+#1#{} Chips'
                     },
-                    {
+                    { --only render if effect is unlocked (The D6)
                         'This Joker gains',
                         '{C:attention}1{} free shop {C:green}Reroll{}',
                         'for every {C:money}$#4#{} you spend',
@@ -20,8 +20,9 @@ return {
                 text = {
                     {
                         '{C:chips}+#1#{} Chips'
+                        --make her also give 10 Mult once unlocked (Full Health pill)
                     },
-                    {
+                    { --Yum Heart
                         'Ranks of played cards',
                         'with {C:hearts}#2#{} suit are',
                         'increased by {C:attention}#3#{}',
@@ -36,11 +37,12 @@ return {
                     {
                         '{C:chips}+#1#{} Chips'
                     },
-                    {
+                    { --Lucky Foot
                         'Increases all {C:attention}listed{}',
                         '{C:green}probabilities{} by {C:green}#2#%{}',
                         '{C:inactive}(Rounded up){}'
                     }
+                    --make him also make booster packs 50/50 free once unlocked (Paper Clip)
                 }
             },
             j_hpfxp_judas = {
