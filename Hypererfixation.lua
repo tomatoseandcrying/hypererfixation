@@ -48,6 +48,6 @@ function HPFX_load_folder(folder, opts)
     end
 end
 
-HPFX_load_folder("src/jokers")
+HPFX_load_folder("src")
 
 --#endregion

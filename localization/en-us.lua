@@ -51,13 +51,53 @@ return {
                     {
                         '{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult'
                     },
-                    {
+                    { --Book of Belial
                         'This Joker gains {C:mult}+#3#{} Mult for',
                         'every {C:money}$#4#{} you spend, resets',
                         'when {C:attention}Boss Blind{} is defeated'
                     }
                 }
-            }
+            },
+            j_hpfxp_threequestionmarks = {
+                name = {
+                    "???",
+                    "{s:0.6}\"Blue Baby\"{}"
+                },
+                text = {
+                    {
+                        '{C:chips}+#1#{} Chips',
+                        '{C:chips}+#2#{} Chips for the next {C:blue,t:j_hpfxp_summon_bluefly}Blue Fly'
+                    },
+                    { --The Poop
+                        'This Joker stores {C:chips}+#3#{} Chips',
+                        'when blind is defeated'
+                    },
+                    { --Also The Poop
+                        'Hit the {C:attention}spacebar{} to summon a {C:chips}Blue Fly{},',
+                        'and give it all of the stored chips'
+                    }
+                }
+            },
+            j_hpfxp_summon_bluefly = {
+                name = "Blue Fly",
+                text = {
+                    {
+                        '{C:chips}+#1#{} Chips'
+                    },
+                    {
+                        '{C:red,E:2}Destroys{} itself',
+                        'after scoring'
+                    }
+                }
+            },
+        }
+    },
+    misc = {
+        labels = {
+            k_hpfxp_summon = 'Summoned'
+        },
+        dictionary = {
+            k_hpfxp_summon = 'Summoned'
         }
     }
 }
