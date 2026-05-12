@@ -16,6 +16,7 @@ SMODS.Joker {
     },
     rarity = 1,
     cost = 0,
+    attributes = { 'chips', 'scaling', 'economy', 'reroll' },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -39,7 +40,11 @@ SMODS.Joker {
             local rerollFundTemp = card.ability.extra.rerollFund + card.ability.extra.carryover
             local moneySpentTemp = context.amount
             while (moneySpentTemp * -1) > rerollFundTemp do
-                card.ability.extra.rerolls = card.ability.extra.rerolls + card.ability.extra.freeRerollMod
+                SMODS.scale_card(card, {
+                    ref_table = card.ability.extra,
+                    ref_value = "rerolls",
+                    scalar_value = "freeRerollMod"
+                })
                 SMODS.change_free_rerolls(card.ability.extra.freeRerollMod)
                 moneySpentTemp = moneySpentTemp + rerollFundTemp
             end

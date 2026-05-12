@@ -16,6 +16,7 @@ SMODS.Joker {
     },
     rarity = 2,
     cost = 0,
+    attributes = { 'mult', 'chips', 'scaling', 'reset', 'economy' },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
@@ -37,7 +38,11 @@ SMODS.Joker {
             local belialFundTemp = card.ability.extra.belialFund + card.ability.extra.carryover
             local moneySpentTemp = context.amount
             while (moneySpentTemp * -1) > belialFundTemp do
-                card.ability.extra.mult = card.ability.extra.mult + card.ability.extra.multGain
+                SMODS.scale_card(card, {
+                    ref_table = card.ability.extra,
+                    ref_value = "mult",
+                    scalar_value = "multGain"
+                })
                 moneySpentTemp = moneySpentTemp + belialFundTemp
             end
             card.ability.extra.carryover = moneySpentTemp
