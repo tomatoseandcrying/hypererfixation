@@ -9,6 +9,12 @@ SMODS.Atlas {
 
 --#endregion
 
+--#region Fonts
+SMODS.Font {
+    key = 'IsaacGame',
+    path = 'IsaacGame.ttf'
+}
+
 --#region File Loading
 mod_path = "" .. SMODS.current_mod.path
 ---Loads all files in a folder (Will likely load unordered.)

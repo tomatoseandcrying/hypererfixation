@@ -2,7 +2,7 @@ return {
     descriptions = {
         Joker = {
             j_hpfxp_isaac = {
-                name = "Isaac",
+                name = "{f:hpfxp_IsaacGame}Isaac",
                 text = {
                     {
                         '{C:chips}+#1#{} Chips'
@@ -16,7 +16,7 @@ return {
                 }
             },
             j_hpfxp_maggy = {
-                name = "Magdalene",
+                name = "{f:hpfxp_IsaacGame}Magdalene",
                 text = {
                     {
                         '{C:chips}+#1#{} Chips'
@@ -32,7 +32,7 @@ return {
                 }
             },
             j_hpfxp_cain = {
-                name = "Cain",
+                name = "{f:hpfxp_IsaacGame}Cain",
                 text = {
                     {
                         '{C:chips}+#1#{} Chips'
@@ -46,7 +46,7 @@ return {
                 }
             },
             j_hpfxp_judas = {
-                name = "Judas",
+                name = "{f:hpfxp_IsaacGame}Judas",
                 text = {
                     {
                         '{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult'
@@ -60,8 +60,8 @@ return {
             },
             j_hpfxp_threequestionmarks = {
                 name = {
-                    "???",
-                    "{s:0.6}\"Blue Baby\"{}"
+                    "{f:hpfxp_IsaacGame}???",
+                    "{s:0.6,f:hpfxp_IsaacGame}\"Blue Baby\"{}"
                 },
                 text = {
                     {
@@ -79,7 +79,7 @@ return {
                 }
             },
             j_hpfxp_summon_bluefly = {
-                name = "Blue Fly",
+                name = "{f:hpfxp_IsaacGame}Blue Fly",
                 text = {
                     {
                         '{C:chips}+#1#{} Chips'
