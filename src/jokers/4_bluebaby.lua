@@ -16,6 +16,7 @@ SMODS.Joker {
     cost = 0,
     attributes = { 'chips', 'scaling', 'reset', 'generation' },
     loc_vars = function(self, info_queue, card)
+        info_queue[#info_queue + 1] = G.P_CENTERS.j_hpfxp_summon_bluefly
         return {
             vars = {
                 card.ability.extra.chips,

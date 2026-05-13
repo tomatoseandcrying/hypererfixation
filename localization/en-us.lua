@@ -66,7 +66,7 @@ return {
                 text = {
                     {
                         '{C:chips}+#1#{} Chips',
-                        '{C:chips}+#2#{} Chips for the next {C:blue,t:j_hpfxp_summon_bluefly}Blue Fly'
+                        '{C:chips}+#2#{} Chips for the next {C:blue}Blue Fly'
                     },
                     { --The Poop
                         'This Joker stores {C:chips}+#3#{} Chips',
@@ -98,6 +98,28 @@ return {
         },
         dictionary = {
             k_hpfxp_summon = 'Summoned'
+        },
+        quips = {
+            hpfxp_tboi_isaac = {
+                '{f:hpfxp_IsaacGame}Try rerolling your',
+                '{f:hpfxp_IsaacGame,C:attention}HANDS {f:hpfxp_IsaacGame}next time...'
+            },
+            hpfxp_tboi_maggy = {
+                '{f:hpfxp_IsaacGame}Come on! Have a',
+                '{f:hpfxp_IsaacGame}little {f:hpfxp_IsaacGame,C:red}Heart{f:hpfxp_IsaacGame}?'
+            },
+            hpfxp_tboi_cain = {
+                '{f:hpfxp_IsaacGame}Ouch. Bad {C:green,f:hpfxp_IsaacGame}luck{f:hpfxp_IsaacGame}!',
+            },
+            hpfxp_tboi_judas = {
+                '{f:hpfxp_IsaacGame}Dunno about {f:hpfxp_IsaacGame,C:money}gold{f:hpfxp_IsaacGame}, but i DO',
+                '{f:hpfxp_IsaacGame}know a guy that can hook you',
+                '{f:hpfxp_IsaacGame}up with some {f:hpfxp_IsaacGame,C:inactive}silver{f:hpfxp_IsaacGame}...',
+            },
+            hpfxp_tboi_threequestionmarks = {
+                '{f:hpfxp_IsaacGame,C:inactive}I should\'ve stayed',
+                '{f:hpfxp_IsaacGame,C:inactive}in the chest...'
+            }
         }
     }
 }

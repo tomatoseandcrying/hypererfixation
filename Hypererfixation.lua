@@ -10,10 +10,78 @@ SMODS.Atlas {
 --#endregion
 
 --#region Fonts
+
 SMODS.Font {
     key = 'IsaacGame',
     path = 'IsaacGame.ttf'
 }
+
+--#endregion
+
+--#region Quips
+
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_isaac',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_isaac'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_isaac')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_maggy',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_maggy'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_maggy')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_cain',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_cain'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_cain')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_judas',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_judas'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_judas')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_threequestionmarks',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_threequestionmarks'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_threequestionmarks')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+
+--#endregion
 
 --#region File Loading
 mod_path = "" .. SMODS.current_mod.path
