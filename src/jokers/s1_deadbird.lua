@@ -1,5 +1,5 @@
 SMODS.Joker {
-    key = 'summon_bluefly',
+    key = 'summon_deadbird',
     atlas = 'placeholders',
     pos = {
         x = 0,
@@ -7,7 +7,7 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            chips = 0
+            chips = 2
         }
     },
     rarity = 'hpfxp_summon',
@@ -20,12 +20,12 @@ SMODS.Joker {
         }
     end,
     calculate = function(self, card, context)
-        if context.joker_main then --scoring
+        if context.individual and context.cardarea == G.play then --scoring
             return {
                 chips = card.ability.extra.chips
             }
         end
-        if context.after then --self destruction
+        if context.end_of_round and context.main_eval then --self destruction
             SMODS.destroy_cards(card, true, false, false)
         end
     end,

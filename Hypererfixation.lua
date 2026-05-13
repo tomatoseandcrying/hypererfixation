@@ -81,6 +81,18 @@ SMODS.JimboQuip({
     end
 })
 SMODS.JimboQuip({
+    key = 'hpfxp_tboi_eve',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_eve'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_eve')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
     key = 'hpfxp_tboi_summon_bluefly',
     type = 'loss',
     extra = {
@@ -88,6 +100,18 @@ SMODS.JimboQuip({
     },
     filter = function(self, quip_type)
         if next(SMODS.find_card('j_hpfxp_summon_bluefly')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_summon_deadbird',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_summon_deadbird'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_summon_deadbird')) then
             return true, { weight = 10 }
         end
     end
@@ -137,3 +161,23 @@ end
 HPFX_load_folder("src")
 
 --#endregion
+
+local can_sell = Card.can_sell_card
+function Card:can_sell_card(context)
+    local ret = can_sell(self, context)
+    if self:is_rarity("hpfxp_summon") then return false end
+    return ret
+end
+
+SMODS.current_mod.optional_features = function()
+    return {
+        post_trigger = true,
+        retrigger_joker = true,
+        quantum_enhancements = true,
+        object_weights = true,
+        cardareas = {
+            discard = true,
+            deck = true
+        }
+    }
+end

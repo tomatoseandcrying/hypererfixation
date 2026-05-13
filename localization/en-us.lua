@@ -78,6 +78,23 @@ return {
                     }
                 }
             },
+            j_hpfxp_eve = {
+                name = "{f:hpfxp_IsaacGame}Eve",
+                text = {
+                    {
+                        '{C:chips}+#1#{} Chips'
+                    },
+                    { --Whore of Babylon
+                        '{C:chips}+#2#{} Chips when {C:attention}#3#{}',
+                        'hands remaining'
+                    },
+                    { --Dead Bird
+                        'Summons a {C:attention}Dead Bird{} after',
+                        'hand is played'
+
+                    }
+                }
+            },
             j_hpfxp_summon_bluefly = {
                 name = "{f:hpfxp_IsaacGame}Blue Fly",
                 text = {
@@ -90,6 +107,19 @@ return {
                     }
                 }
             },
+            j_hpfxp_summon_deadbird = {
+                name = "{f:hpfxp_IsaacGame}Dead Bird",
+                text = {
+                    {
+                        '{C:chips}+#1#{} Chips when a',
+                        'playing card is scored',
+                    },
+                    {
+                        '{C:red,E:2}Destroys{} itself at',
+                        'end of round'
+                    }
+                }
+            }
         }
     },
     misc = {
@@ -120,8 +150,15 @@ return {
                 '{f:hpfxp_IsaacGame,C:inactive}I should\'ve stayed',
                 '{f:hpfxp_IsaacGame,C:inactive}in the chest...'
             },
+            hpfxp_tboi_eve = {
+                '{f:hpfxp_IsaacGame}Just a glimpse into my',
+                '{f:hpfxp_IsaacGame}dark, twisted mind...'
+            },
             hpfxp_tboi_summon_bluefly = {
                 '{f:hpfxp_IsaacGame}Buzz. {f:hpfxp_IsaacGame,C:inactive}(How????)'
+            },
+            hpfxp_tboi_summon_deadbird = {
+                '{f:hpfxp_IsaacGame}Twe-tweet. {f:hpfxp_IsaacGame,C:inactive}(Sorry :( )'
             }
         }
     }
