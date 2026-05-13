@@ -80,6 +80,18 @@ SMODS.JimboQuip({
         end
     end
 })
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_summon_bluefly',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_summon_bluefly'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_summon_bluefly')) then
+            return true, { weight = 10 }
+        end
+    end
+})
 
 --#endregion
 

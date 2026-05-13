@@ -119,6 +119,9 @@ return {
             hpfxp_tboi_threequestionmarks = {
                 '{f:hpfxp_IsaacGame,C:inactive}I should\'ve stayed',
                 '{f:hpfxp_IsaacGame,C:inactive}in the chest...'
+            },
+            hpfxp_tboi_summon_bluefly = {
+                '{f:hpfxp_IsaacGame}Buzz. {f:hpfxp_IsaacGame,C:inactive}(How????)'
             }
         }
     }
