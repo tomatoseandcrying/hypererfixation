@@ -46,7 +46,11 @@ SMODS.Keybind({
     key_pressed = "space",
     action = function(self)
         local joker = SMODS.find_card("j_hpfxp_threequestionmarks")[1]
-        if not joker then return end
+        if not joker then
+            return
+        elseif joker.ability.extra.storedChips == 0 then
+            return
+        end
         local bfly =
             SMODS.add_card({
                 set = 'Joker',
