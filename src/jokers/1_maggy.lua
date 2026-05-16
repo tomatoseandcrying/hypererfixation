@@ -13,7 +13,7 @@ SMODS.Joker {
         }
     },
     rarity = 1,
-    cost = 0,
+    cost = 5,
     attributes = { 'chips', 'suit', 'hearts', 'modify_card' },
     loc_vars = function(self, info_queue, card)
         return {

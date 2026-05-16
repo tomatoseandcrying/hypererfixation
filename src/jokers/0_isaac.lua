@@ -15,7 +15,7 @@ SMODS.Joker {
         }
     },
     rarity = 1,
-    cost = 0,
+    cost = 2, --change to 4 once The D6 effect is unlocked
     attributes = { 'chips', 'scaling', 'economy', 'reroll' },
     loc_vars = function(self, info_queue, card)
         return {
@@ -36,7 +36,7 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-        if context.money_altered and context.amount < 0 and not context.blueprint then --THE D6
+        if context.money_altered and context.amount < 0 and not context.blueprint then --The D6
             local rerollFundTemp = card.ability.extra.rerollFund + card.ability.extra.carryover
             local moneySpentTemp = context.amount
             while (moneySpentTemp * -1) > rerollFundTemp do
