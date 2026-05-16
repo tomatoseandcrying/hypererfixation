@@ -110,7 +110,8 @@ return {
                 name = "{f:hpfxp_IsaacGame}Azazel",
                 text = {
                     { --Nerfed Brimstone
-                        '{X:mult,C:white}X#1#{} Mult on {C:attention}first hand{} of round'
+                        '{X:mult,C:white}X#1#{} Mult on {C:attention}first',
+                        '{C:attention}hand{} of round'
                     },
                 }
             },
