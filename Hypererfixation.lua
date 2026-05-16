@@ -93,6 +93,42 @@ SMODS.JimboQuip({
     end
 })
 SMODS.JimboQuip({
+    key = 'hpfxp_tboi_samson',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_samson'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_samson')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_azazel',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_azazel'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_azazel')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
+    key = 'hpfxp_tboi_lazarus',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_lazarus'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_lazarus')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
     key = 'hpfxp_tboi_summon_bluefly',
     type = 'loss',
     extra = {

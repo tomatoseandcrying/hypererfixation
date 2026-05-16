@@ -1,4 +1,5 @@
 SMODS.Joker {
+    no_collection = true,
     key = 'summon_deadbird',
     atlas = 'placeholders',
     pos = {

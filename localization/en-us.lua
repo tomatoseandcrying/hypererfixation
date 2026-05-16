@@ -115,6 +115,19 @@ return {
                     },
                 }
             },
+            j_hpfxp_lazarus = {
+                name = "{f:hpfxp_IsaacGame}Lazarus",
+                text = {
+                    {
+                        '{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult'
+                    },
+                    { --Lazarus the Risen
+                        'The first time this Joker would be',
+                        '{C:red,E:2}destroyed{}, it instead gains {C:red}+#3#{} Mult',
+                        '{C:inactive}(Resets at end of round)'
+                    }
+                }
+            },
             j_hpfxp_summon_bluefly = {
                 name = "{f:hpfxp_IsaacGame}Blue Fly",
                 text = {
@@ -173,6 +186,17 @@ return {
             hpfxp_tboi_eve = {
                 '{f:hpfxp_IsaacGame}Just a glimpse into my',
                 '{f:hpfxp_IsaacGame}dark, twisted mind...'
+            },
+            hpfxp_tboi_samson = {
+                '{f:hpfxp_IsaacGame,C:red}RAAAAAAAAAAAAAAGE!',
+            },
+            hpfxp_tboi_azazel = {
+                '{f:hpfxp_IsaacGame}I literally gave',
+                '{f:hpfxp_IsaacGame}you Brimstone, dude.'
+            },
+            hpfxp_tboi_lazarus = {
+                '{f:hpfxp_IsaacGame}We played both sides',
+                '{f:hpfxp_IsaacGame}and STILL {f:hpfxp_IsaacGame}lost???'
             },
             hpfxp_tboi_summon_bluefly = {
                 '{f:hpfxp_IsaacGame}Buzz. {f:hpfxp_IsaacGame,C:inactive}(How????)'
