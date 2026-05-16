@@ -36,7 +36,7 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-        if context.money_altered and context.amount < 0 and not context.blueprint then --reroll stacking
+        if context.money_altered and context.amount < 0 and not context.blueprint then --THE D6
             local rerollFundTemp = card.ability.extra.rerollFund + card.ability.extra.carryover
             local moneySpentTemp = context.amount
             while (moneySpentTemp * -1) > rerollFundTemp do

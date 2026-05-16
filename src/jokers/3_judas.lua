@@ -34,7 +34,7 @@ SMODS.Joker {
                 mult = card.ability.extra.mult
             }
         end
-        if context.money_altered and context.amount < 0 and not context.blueprint then --mult stacking
+        if context.money_altered and context.amount < 0 and not context.blueprint then --Book of Belial
             local belialFundTemp = card.ability.extra.belialFund + card.ability.extra.carryover
             local moneySpentTemp = context.amount
             while (moneySpentTemp * -1) > belialFundTemp do

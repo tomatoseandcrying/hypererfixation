@@ -32,7 +32,7 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-        if context.end_of_round and context.main_eval then
+        if context.end_of_round and context.main_eval then --chip gain
             SMODS.scale_card(card, {
                 ref_table = card.ability.extra,
                 ref_value = "storedChips",
@@ -42,7 +42,7 @@ SMODS.Joker {
     end,
 }
 
-SMODS.Keybind({
+SMODS.Keybind({ --The Poop
     key_pressed = "space",
     action = function(self)
         local joker = SMODS.find_card("j_hpfxp_threequestionmarks")[1]

@@ -30,7 +30,7 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-        if context.before and not context.blueprint then --Yum Heart effect
+        if context.before and not context.blueprint then --Yum Heart
             local percent = 1.15 - (1 - 0.999) / (#G.hand.highlighted - 0.998) * 0.3
             for _, scored in ipairs(context.scoring_hand) do
                 if scored:is_suit(card.ability.extra.suit) then

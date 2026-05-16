@@ -5,6 +5,6 @@
     "description": "Ready for Round 2?",
     "prefix": "hpfxp",
     "main_file": "Hypererfixation.lua",
-    "version": "0.7.3",
+    "version": "0.7.3a",
     "no_marquee": true
 }

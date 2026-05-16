@@ -26,8 +26,8 @@ SMODS.Joker {
         }
     end,
     calculate = function(self, card, context)
-        if context.joker_main then --scoring
-            if G.GAME.current_round.hands_left == card.ability.extra.handThreshold then
+        if context.joker_main then                                                      --scoring
+            if G.GAME.current_round.hands_left == card.ability.extra.handThreshold then --Whore of Babylon
                 return {
                     chips = card.ability.extra.babylonChips
                 }
@@ -37,7 +37,7 @@ SMODS.Joker {
                 }
             end
         end
-        if context.final_scoring_step then
+        if context.final_scoring_step then --Dead Bird
             G.E_MANAGER:add_event(Event({
                 func = function()
                     SMODS.add_card({
