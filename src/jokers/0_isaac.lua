@@ -58,3 +58,5 @@ SMODS.Joker {
         end
     end
 }
+-- Yeah I gave him D6 to start with, you'll have to unlock it just like other unlockables in the future
+-- But while there's nothing, I didn't want him to just be chips

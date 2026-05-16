@@ -20,7 +20,7 @@ return {
                 text = {
                     {
                         '{C:chips}+#1#{} Chips'
-                        --make her also give 10 Mult once unlocked (Full Health pill)
+
                     },
                     { --Yum Heart
                         'Ranks of played cards',
@@ -28,7 +28,6 @@ return {
                         'increased by {C:attention}#3#{}',
                         '{s:0.85,C:inactive}(Aces become 2s){}'
                     }
-
                 }
             },
             j_hpfxp_cain = {
@@ -42,7 +41,6 @@ return {
                         '{C:green}probabilities{} by {C:green}#2#%{}',
                         '{C:inactive}(Rounded up){}'
                     }
-                    --make him also make booster packs 50/50 free once unlocked (Paper Clip)
                 }
             },
             j_hpfxp_judas = {

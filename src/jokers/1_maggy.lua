@@ -48,3 +48,8 @@ SMODS.Joker {
         end
     end
 }
+
+--give her a custom tarot once unlocked (Full Health pill)
+--probably like
+--Magdalene's <-- in small text above --> Death
+--Select up to 4 Heart cards, convert the left half into the right half

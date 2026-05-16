@@ -28,10 +28,12 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-        if context.mod_probability and not context.blueprint then --probability mod
+        if context.mod_probability and not context.blueprint then --Lucky Foot
             return {
                 numerator = math.ceil(context.numerator + (1 / card.ability.extra.probabilityIncrease))
             }
         end
     end
 }
+
+--make him also make booster packs 50/50 free once unlocked (Paper Clip)
