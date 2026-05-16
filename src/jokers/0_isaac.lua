@@ -10,8 +10,7 @@ SMODS.Joker {
             chips = 35,
             rerolls = 1,
             rerollFund = 6,
-            carryover = 0,
-            freeRerollMod = 1
+            total = 0,
         }
     },
     rarity = 1,
@@ -28,33 +27,29 @@ SMODS.Joker {
         }
     end,
     add_to_deck = function(self, card, from_debuff) --initial free reroll
-        SMODS.change_free_rerolls(card.ability.extra.freeRerollMod)
+        SMODS.change_free_rerolls(card.ability.extra.rerolls)
     end,
     calculate = function(self, card, context)
-        if context.joker_main then --scoring
+        if context.joker_main then -- scoring
             return {
                 chips = card.ability.extra.chips
             }
         end
         if context.money_altered and context.amount < 0 and not context.blueprint then --The D6
-            local rerollFundTemp = card.ability.extra.rerollFund + card.ability.extra.carryover
-            local moneySpentTemp = context.amount
-            while (moneySpentTemp * -1) > rerollFundTemp do
-                SMODS.scale_card(card, {
-                    ref_table = card.ability.extra,
-                    ref_value = "rerolls",
-                    scalar_value = "freeRerollMod"
-                })
-                SMODS.change_free_rerolls(card.ability.extra.freeRerollMod)
-                moneySpentTemp = moneySpentTemp + rerollFundTemp
-            end
-            card.ability.extra.carryover = moneySpentTemp
+            card.ability.extra.total = card.ability.extra.total - context.amount
+            local value = math.floor(card.ability.extra.total / card.ability.extra.rerollFund)
+            card.ability.extra.rerolls = card.ability.extra.rerolls + value
+            card.ability.extra.total = card.ability.extra.total % card.ability.extra.rerollFund
+            SMODS.change_free_rerolls(value)
+
             return {
                 message = localize('k_upgrade_ex')
             }
         end
         if context.reroll_shop and not context.blueprint then --reroll counter visual decrease
-            card.ability.extra.rerolls = card.ability.extra.rerolls - card.ability.extra.freeRerollMod
+            if card.ability.extra.rerolls > 0 then
+                card.ability.extra.rerolls = card.ability.extra.rerolls - 1
+            end
         end
     end
 }
