@@ -106,6 +106,14 @@ return {
                     }
                 }
             },
+            j_hpfxp_azazel = {
+                name = "{f:hpfxp_IsaacGame}Azazel",
+                text = {
+                    { --Nerfed Brimstone
+                        '{X:mult,C:white}X#1#{} Mult on {C:attention}first hand{} of round'
+                    },
+                }
+            },
             j_hpfxp_summon_bluefly = {
                 name = "{f:hpfxp_IsaacGame}Blue Fly",
                 text = {

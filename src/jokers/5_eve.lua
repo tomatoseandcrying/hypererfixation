@@ -14,7 +14,7 @@ SMODS.Joker {
     },
     rarity = 1,
     cost = 5,
-    attributes = {},
+    attributes = { 'chips', 'generation', 'hands' },
     loc_vars = function(self, info_queue, card)
         info_queue[#info_queue + 1] = G.P_CENTERS.j_hpfxp_summon_deadbird
         return {

@@ -2,8 +2,8 @@ SMODS.Joker {
     key = 'summon_bluefly',
     atlas = 'placeholders',
     pos = {
-        x = 0,
-        y = 0
+        x = 1,
+        y = 3
     },
     config = {
         extra = {
@@ -12,6 +12,7 @@ SMODS.Joker {
     },
     rarity = 'hpfxp_summon',
     cost = 0,
+    attributes = { 'chips', 'summon' },
     loc_vars = function(self, info_queue, card)
         return {
             vars = {
