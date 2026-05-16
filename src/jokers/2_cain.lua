@@ -7,7 +7,7 @@ SMODS.Joker {
     },
     config = {
         extra = {
-            chips = 40,
+            chips = 42,
             probabilityIncrease = 10
         }
     },
