@@ -93,6 +93,19 @@ return {
                     }
                 }
             },
+            j_hpfxp_samson = {
+                name = "{f:hpfxp_IsaacGame}Samson",
+                text = {
+                    {
+                        '{C:chips}+#1#{} Chips and {C:mult}+#2#{} Mult'
+                    },
+                    { --Bloody Lust
+                        'Gains {C:mult}+#3#{} Mult when a played',
+                        'card is {C:attention}not{} scored',
+                        '{C:inactive}(#4# times remaining){}'
+                    }
+                }
+            },
             j_hpfxp_summon_bluefly = {
                 name = "{f:hpfxp_IsaacGame}Blue Fly",
                 text = {
