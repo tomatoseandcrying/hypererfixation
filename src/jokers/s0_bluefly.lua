@@ -2,8 +2,8 @@ SMODS.Joker {
     key = 'summon_bluefly',
     atlas = 'placeholders',
     pos = {
-        x = 1,
-        y = 3
+        x = 3,
+        y = 1
     },
     config = {
         extra = {
