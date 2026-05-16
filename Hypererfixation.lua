@@ -158,7 +158,7 @@ function HPFX_load_folder(folder, opts)
     end
 end
 
-HPFX_load_folder("src")
+HPFX_load_folder("src", { except = "template" })
 
 --#endregion
 
