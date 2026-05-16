@@ -10,7 +10,8 @@ SMODS.Joker {
             chips = 35,
             rerolls = 1,
             rerollFund = 6,
-            total = 0,
+            freeRerollMod = 1,
+            rerollCharge = 0,
         }
     },
     rarity = 1,
@@ -30,26 +31,26 @@ SMODS.Joker {
         SMODS.change_free_rerolls(card.ability.extra.rerolls)
     end,
     calculate = function(self, card, context)
-        if context.joker_main then -- scoring
+        if context.joker_main then --scoring
             return {
                 chips = card.ability.extra.chips
             }
         end
         if context.money_altered and context.amount < 0 and not context.blueprint then --The D6
-            card.ability.extra.total = card.ability.extra.total - context.amount
-            local value = math.floor(card.ability.extra.total / card.ability.extra.rerollFund)
-            card.ability.extra.rerolls = card.ability.extra.rerolls + value
-            card.ability.extra.total = card.ability.extra.total % card.ability.extra.rerollFund
-            SMODS.change_free_rerolls(value)
-
-            return {
-                message = localize('k_upgrade_ex')
-            }
-        end
-        if context.reroll_shop and not context.blueprint then --reroll counter visual decrease
-            if card.ability.extra.rerolls > 0 then
-                card.ability.extra.rerolls = card.ability.extra.rerolls - 1
+            card.ability.extra.rerollCharge = card.ability.extra.rerollCharge - context.amount
+            while card.ability.extra.rerollCharge >= card.ability.extra.rerollFund do
+                SMODS.scale_card(card, {
+                    ref_table = card.ability.extra,
+                    ref_value = "rerolls",
+                    scalar_value = "freeRerollMod",
+                    message_colour = G.C.GREEN
+                })
+                card.ability.extra.rerollCharge = card.ability.extra.rerollCharge - card.ability.extra.rerollFund
+                SMODS.change_free_rerolls(card.ability.extra.freeRerollMod)
             end
+        end
+        if context.reroll_shop and card.ability.extra.rerolls > 0 and not context.blueprint then --reroll counter visual decrease
+            card.ability.extra.rerolls = card.ability.extra.rerolls - card.ability.extra.freeRerollMod
         end
     end
 }
