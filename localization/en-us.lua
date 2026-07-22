@@ -150,6 +150,22 @@ return {
                     },
                 }
             },
+            j_hpfxp_thelost = {
+                name = "{f:hpfxp_IsaacGame}The Lost",
+                text = {
+                    {
+                        '{C:chips}+#1#{} Chips',
+                        '{C:chips}+#2#{} Chips on a played',
+                        '{C:attention}debuffed{} card'
+                    },
+                    {
+                        'Hit the {C:attention}spacebar{} to reroll the {C:money}shop{}',
+                        "{C:inactive,s:0.7}(Once per shop)",
+                        "Every item has a {C:green}#3# in #4#{} chance",
+                        "to instead be {C:red,E:2}deleted{}"
+                    },
+                }
+            },
             j_hpfxp_summon_bluefly = {
                 name = "{f:hpfxp_IsaacGame}Blue Fly",
                 text = {
@@ -225,6 +241,10 @@ return {
                 '{C:attention,s:1.4}it {s:1.1,f:hpfxp_IsaacGame}is {s:1.1,C:purple}T{s:1,f:hpfxp_IsaacGame}ime',
                 '{f:hpfxp_IsaacGame,s:1.3}to {s:1.3,C:attention}s{f:hpfxp_IsaacGame}t{s:0.9,C:attention}op'
 
+            },
+            hpfxp_tboi_thelost = {
+                '{f:hpfxp_IsaacGame}You lost? No, me Lost. You can be',
+                '{f:hpfxp_IsaacGame}um... The Dead Guy, or something...',
             },
             hpfxp_tboi_summon_bluefly = {
                 '{f:hpfxp_IsaacGame}Buzz. {f:hpfxp_IsaacGame,C:inactive}(How????)'

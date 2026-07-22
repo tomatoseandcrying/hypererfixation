@@ -141,6 +141,18 @@ SMODS.JimboQuip({
     end
 })
 SMODS.JimboQuip({
+    key = 'hpfxp_tboi_thelost',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_thelost'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_thelost')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
     key = 'hpfxp_tboi_summon_bluefly',
     type = 'loss',
     extra = {
@@ -229,3 +241,26 @@ SMODS.current_mod.optional_features = function()
         }
     }
 end
+
+Hypererfixation = Hypererfixation or {
+    get_lost_slots = function() --Eternal D6 Caveat
+        if not next(SMODS.find_card("j_hpfxp_thelost")) then
+            return
+        end
+        local joker = SMODS.find_card("j_hpfxp_thelost")[1]
+        local n = 0
+        for i = 1, G.GAME.shop.joker_max - #G.shop_jokers.cards do
+            if not
+                SMODS.pseudorandom_probability(
+                    joker,
+                    'hpfxp_tboi_thelost' .. G.GAME.round_resets.ante,
+                    joker.ability.extra.numerator, -- replaced with my desired odds
+                    joker.ability.extra.denominator
+                )
+            then
+                n = n + 1
+            end
+        end
+        return n
+    end
+}
