@@ -129,6 +129,18 @@ SMODS.JimboQuip({
     end
 })
 SMODS.JimboQuip({
+    key = 'hpfxp_tboi_eden',
+    type = 'loss',
+    extra = {
+        center = 'j_hpfxp_eden'
+    },
+    filter = function(self, quip_type)
+        if next(SMODS.find_card('j_hpfxp_eden')) then
+            return true, { weight = 10 }
+        end
+    end
+})
+SMODS.JimboQuip({
     key = 'hpfxp_tboi_summon_bluefly',
     type = 'loss',
     extra = {
@@ -194,7 +206,7 @@ function HPFX_load_folder(folder, opts)
     end
 end
 
-HPFX_load_folder("src", { except = "template" })
+HPFX_load_folder("src", { except = { "template", "9_eden" } })
 
 --#endregion
 

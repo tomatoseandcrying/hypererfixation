@@ -128,6 +128,28 @@ return {
                     }
                 }
             },
+            j_hpfxp_eden = {
+                name = "{f:hpfxp_IsaacGame}Eden",
+                text = {
+                    {
+                        " "
+                    },
+                    {
+                        " "
+                    }
+                }
+            },
+            j_hpfxp_eden_nobuy = {
+                name = "{f:hpfxp_IsaacGame}Eden",
+                text = {
+                    {
+                        "joker"
+                    },
+                    {
+                        "bottom text"
+                    },
+                }
+            },
             j_hpfxp_summon_bluefly = {
                 name = "{f:hpfxp_IsaacGame}Blue Fly",
                 text = {
@@ -197,6 +219,12 @@ return {
             hpfxp_tboi_lazarus = {
                 '{f:hpfxp_IsaacGame}We played both sides',
                 '{f:hpfxp_IsaacGame}and STILL {f:hpfxp_IsaacGame}lost???'
+            },
+            hpfxp_tboi_eden = {
+                '{s:1.5,f:hpfxp_IsaacGame}per{C:attention,s:1.4}ha{C:chips,s:1.2}ps',
+                '{C:attention,s:1.4}it {s:1.1,f:hpfxp_IsaacGame}is {s:1.1,C:purple}T{s:1,f:hpfxp_IsaacGame}ime',
+                '{f:hpfxp_IsaacGame,s:1.3}to {s:1.3,C:attention}s{f:hpfxp_IsaacGame}t{s:0.9,C:attention}op'
+
             },
             hpfxp_tboi_summon_bluefly = {
                 '{f:hpfxp_IsaacGame}Buzz. {f:hpfxp_IsaacGame,C:inactive}(How????)'

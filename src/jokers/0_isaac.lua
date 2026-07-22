@@ -36,7 +36,7 @@ SMODS.Joker {
                 chips = card.ability.extra.chips
             }
         end
-        if context.money_altered and context.amount < 0 and not context.blueprint then --The D6
+        if context.money_altered and context.amount < 0 and not context.blueprint and not context.reroll_shop then --The D6
             card.ability.extra.rerollCharge = card.ability.extra.rerollCharge - context.amount
             while card.ability.extra.rerollCharge >= card.ability.extra.rerollFund do
                 SMODS.scale_card(card, {
